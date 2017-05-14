@@ -6,7 +6,7 @@
 
 ```
 pip install pyTelegramBotAPI
-wget https://github.com/botanio/sdk/blob/master/botan.py
+wget https://raw.githubusercontent.com/botanio/sdk/master/botan.py
 ```
 
 ## Usage
@@ -41,8 +41,8 @@ automatically track with name='group.callback.help_button_pressed'
 
 ```python
 @bot.group_callback("help_button_pressed")
-def member_help(message):
-    bot.reply_to(message, "Someone need help in our group!")
+def member_help(call):
+    bot.reply_to(call.message, "Someone need help in our group!")
 ```
 
 available decorators:
